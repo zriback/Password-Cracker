@@ -15,14 +15,12 @@ void PassCracker::setGoal(const char *goal){
     strncpy(this->goal, goal, sizeof(this->goal));
 }
 
-std::string PassCracker::calculateHash(char * type, char *msg){
-
-    //TODO make the type actually do something
+std::string PassCracker::calculateHash(char *msg){
     int msg_len = strlen(msg);
     unsigned char* digest = nullptr;
     unsigned int len = 0;
 
-    hash_md5((const unsigned char *)msg, msg_len, &digest, &len);
+    hash_md5(this->type, (const unsigned char *)msg, msg_len, &digest, &len);
 
     std::string hash;
     std::stringstream ss;

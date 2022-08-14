@@ -15,7 +15,7 @@ class PassCracker{
 
     void setGoal(const char *goal);
 
-    std::string calculateHash(char * type, char *msg);
+    std::string calculateHash(char *msg);
 };
 
 

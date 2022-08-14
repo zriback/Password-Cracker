@@ -29,9 +29,9 @@ int main(int argc, char **argv){
     std::string hash;
 
     char msg[256];
-    strncpy(msg, "hello", sizeof(msg));
+    strncpy(msg, "supertime", sizeof(msg));
 
-    hash = pc->calculateHash(type, msg);
+    hash = pc->calculateHash(msg);
 
     std::cout << hash << "\n";
 
