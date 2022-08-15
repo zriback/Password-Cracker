@@ -15,7 +15,9 @@ class PassCracker{
 
     void setGoal(const char *goal);
 
-    std::string calculateHash(char *msg);
+    std::string calculateHash(const char *msg);
+
+    std::string crackHash(char *wordlist);
 };
 
 
