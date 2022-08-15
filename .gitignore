@@ -1,3 +1,4 @@
 .vscode
+wordlists/
 *.ps1
 *.exe
